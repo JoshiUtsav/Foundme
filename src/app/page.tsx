@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { Button } from '@/components/ui'
+import { Button } from '@/components/ui/button'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 

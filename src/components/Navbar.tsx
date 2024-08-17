@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -67,7 +67,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="text-2xl font-bold mb-4 md:mb-0">
           <Link href="/">
-            <Image src="/public/logo.jpg" alt="Logo" width={10} height={10}/>
+            <Image src="/public/logo.jpg" alt="Logo" width={10} height={10} />
           </Link>
         </div>
 
