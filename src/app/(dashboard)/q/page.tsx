@@ -1,30 +1,31 @@
-'use client'
+"use client";
 
-import { Button, Input } from '@/components/ui'
-import axios from 'axios'
-import React, { FormEvent } from 'react'
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import axios from "axios";
+import React, { FormEvent } from "react";
 
 export default function Chat_Query() {
-  const [query, setQuery] = React.useState('')
+  const [query, setQuery] = React.useState("");
 
   const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault()
+    event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api', {
+      const response = await axios.post("http://localhost:3000/api", {
         text: query,
-      })
+      });
 
-      const result = response?.data?.Text?.matches
+      const result = response?.data?.Text?.matches;
 
       for (let i = 0; i < result.length; i++) {
-        const holder = result[i].id
+        const holder = result[i].id;
 
-        console.log(holder)
+        console.log(holder);
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   return (
     <div className="flex w-full max-w-sm items-center space-x-2">
@@ -38,5 +39,5 @@ export default function Chat_Query() {
         Send
       </Button>
     </div>
-  )
+  );
 }
