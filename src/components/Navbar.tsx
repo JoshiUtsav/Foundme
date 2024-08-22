@@ -63,7 +63,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white text-black shadow-md py-4">
-      <div className="container mx-auto flex md:flex-row items-center justify-between">
+      <div className="container mx-auto flex md:flex-row items-center justify-between gap-4">
         {/* Logo */}
         <div className="text-2xl font-bold mb-4 md:mb-0">
           <Link href="/">
@@ -158,9 +158,9 @@ export default function Navbar() {
 
         {/* Search Icon */}
         <div className="hidden md:flex items-center space-x-4">
-          <DarkModeButton />
           <FaSearch className="text-xl cursor-pointer hover:text-gray-700" />
         </div>
+        <DarkModeButton />
       </div>
     </nav>
   );
