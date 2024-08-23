@@ -1,8 +1,14 @@
-'use client'
+"use client";
 
-import React from 'react'
-import Link from 'next/link'
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa'
+import React from "react";
+import Link from "next/link";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaGithub,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -154,5 +160,5 @@ export default function Footer() {
         </p>
       </div>
     </footer>
-  )
+  );
 }

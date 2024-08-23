@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
@@ -15,6 +15,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import DarkModeButton from "@/components/Darkmode";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -129,7 +130,7 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Components</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[600px] md:grid-cols-2">
+                    <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[600px] md:grid-cols-2 lg:grid-cols-3">
                       {components.map((component) => (
                         <ListItem
                           key={component.title}
@@ -155,16 +156,17 @@ export default function Navbar() {
             </NavigationMenu>
           </div>
         </div>
-
-        {/* Search Icon */}
-        <div className="hidden md:flex items-center space-x-4">
-          <FaSearch className="text-xl cursor-pointer hover:text-gray-700" />
+        <div className="md:flex items-center hidden gap-5">
+          <DarkModeButton />
+          <Link href={"/auth"}>
+            <HoverBorderGradient children="Login" />
+          </Link>
         </div>
-        <DarkModeButton />
       </div>
     </nav>
   );
 }
+
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
