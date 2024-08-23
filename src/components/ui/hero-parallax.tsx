@@ -115,7 +115,7 @@ export const Header = () => {
       </p>
       <div className="mt-8">
       <Link href={"/q"}>
-        <HoverBorderGradient children="Get started"/>
+        <HoverBorderGradient >Get started</HoverBorderGradient>
       </Link>
 
       </div>

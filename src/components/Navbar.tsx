@@ -144,7 +144,7 @@ export default function Navbar() {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="/docs" legacyBehavior passHref>
+                  <Link href="/docs" passHref>
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
                     >
@@ -159,7 +159,7 @@ export default function Navbar() {
         <div className="md:flex items-center hidden gap-5">
           <DarkModeButton />
           <Link href={"/auth"}>
-            <HoverBorderGradient children="Login" />
+            <HoverBorderGradient>Login</HoverBorderGradient>
           </Link>
         </div>
       </div>
